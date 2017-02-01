@@ -51,6 +51,47 @@ Just include `users` in your node's `run_list`:
 }
 ```
 
+```json
+{
+  "opsworks": {
+    "data_bags": {
+      "user": {
+        "user1" : {
+          "id" : "user1",
+          "comments" : "some comment",
+          "home" : "/home/user1",
+          "shell" : "/bin/bash",
+          "sudo" : "true",
+          "password" : "$1$d01YpgzW$Yt64wYX/uWstYf2lGiZuR0",
+          "ssh_keys" : ["ssh-rsa M.local"]
+         },
+        "user2" : {
+          "id" : "user2",
+          "comments" : "some comment",
+          "home" : "/home/user2",
+          "shell" : "/bin/bash",
+          "sudo" : "true",
+          "password" : "$1$d01YpgzW$Yt64wYX/uWstYf2lGiZuR0",
+          "ssh_keys" : ["ssh-rsa M.local"]
+         },
+           "user3" : {
+          "id" : "user3",
+          "comments" : "some comment",
+          "home" : "/home/user3",
+          "shell" : "/bin/bash",
+          "sudo" : "true",
+          "password" : "$1$d01YpgzW$Yt64wYX/uWstYf2lGiZuR0",
+          "ssh_keys" : ["ssh-rsa M.local"]
+       }
+      }
+    }
+  }
+}
+```
+#Password
+```
+openssl passwd -1 "plaintextpassword"
+```
 Contributing
 ------------
 TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
