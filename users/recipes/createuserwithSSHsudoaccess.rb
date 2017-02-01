@@ -1,6 +1,8 @@
 users = data_bag("user")
 users.each do |user|
+    Chef::Log.info("********** The user is '#{user}' **********")
     user_data = data_bag_item("user", user)
+	 Chef::Log.info("********** The user_data is '#{user_data}' **********")
         user user_data["id"] do
                 comment user_data["comments"]
                 #uid user_data["uid"]
