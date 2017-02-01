@@ -23,8 +23,8 @@ users.each do |user|
  	        mode 0600
  	        owner user_data["id"]
  	        action :create
-		recursive true
         end
+	
 	if user_data["sudo"] == "true"
 		template "/etc/sudoers.d/#{user_data["id"]}" do
        		source "sudoers.erb"
